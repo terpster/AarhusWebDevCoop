@@ -332,6 +332,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\db\AarhusWebDevCoop.mdf" />
+    <Content Include="App_Data\db\AarhusWebDevCoop_log.ldf">
+      <DependentUpon>AarhusWebDevCoop.mdf</DependentUpon>
+    </Content>
     <Content Include="Config\splashes\booting.aspx" />
     <Content Include="Config\splashes\noNodes.aspx" />
     <Content Include="Content\Site.css" />
