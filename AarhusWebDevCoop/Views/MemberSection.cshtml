@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.MemberSection>
+    @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json;
+@using Umbraco.Web.Models;
+    @using ContentModels = Umbraco.Web.PublishedContentModels;
+    @{
+    Layout = "Master.cshtml";
+    }
+    <h2>Active Members</h2>
+    <ul>
+        @foreach (var member in ApplicationContext.Current.Services.MemberService.GetMembersByMemberType("Active"))
+        {
+        string image = member.GetValue<string>("photo");
+        var imageCrop = JsonConvert.DeserializeObject<ImageCropDataSet>(image);
+        var imagePath = imageCrop.Src.GetCropUrl(width: 100);
+        <li>@member.Name <span><img src="@imagePath" /></span></li>
+        <ul>
+            <li>
+               <span><strong>Adresse:</strong></span> @member.GetValue("Address")
+            </li>
+            <li>
+                <span><strong>Postnr.:</strong></span> @member.GetValue("Zip")
+            </li>
+            <li>
+                <span><strong>By:</strong></span> @member.GetValue("City")
+            </li>
+            <li>
+                <span><strong>Telefonnr.:</strong></span> @member.GetValue("Mobile")
+            </li>
+            <li>
+                <span><strong>Email.:</strong></span> @member.GetValue("Mobile")
+            </li>
+        </ul>
+        }
+    </ul>
+    <h2>Guests</h2>
+    <ul>
+        @foreach (var member in ApplicationContext.Current.Services.MemberService.GetMembersByMemberType("Guest"))
+        {
+        <li>@member.Name</li>
+        }
+    </ul>

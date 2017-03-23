@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ProjectItem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+@{
+    String[] statuses = @Umbraco.Field("projectStatus").ToString().Split(',');
+    string statusString = string.Join(", ", from status in statuses select umbraco.library.GetPreValueAsString(Convert.ToInt32(status)));
+}
+<h3>@Umbraco.Field("projectTitle")</h3>
+<p><strong>Skrevet af:</strong> @Umbraco.Field("creatorName")</p>
+<p><strong>Oprettet:</strong> @Umbraco.Field("createDate")</p>
+<p><strong>Project status:</strong> @statusString</p>
+	@Umbraco.Field("projectDescription")
+	

@@ -1,0 +1,59 @@
+﻿@model AarhusWebDevCoop.ViewModels.ContactForm
+
+@if (TempData["success"] == null)
+{
+    <div class="container">
+
+        @using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { }, new { @class = "form-horizontal" }))
+        {
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
+                    @Html.ValidationMessageFor(m => m.Subject)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Your message" })
+                    @Html.ValidationMessageFor(m => m.Message)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button id="contact-submit" type="submit" class="btn btn-primary input-medium pullleft">Send</button>
+                </div>
+            </div>
+
+        }
+    </div>
+
+}
+else
+{
+    <div class="container">
+        <p>Thank you for contacting us. We’ll be in touch soon!</p>
+    </div>
+}
+
+
+
+
+

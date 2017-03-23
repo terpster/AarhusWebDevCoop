@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>@Umbraco.Field("siteTitle")</title>
+	<meta name="description" content=@Umbraco.Field("metaDescription")>
+  	<meta name="keywords" content=@Umbraco.Field("metaKeywords")>
+	
+    @*<script src="~/Scripts/jquery-3.1.1.js"></script>*@
+   
+</head>
+<body>
+
+        @Umbraco.RenderMacro("mainMenu")
+			
+		@RenderBody()
+	
+			
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>@Umbraco.Field("footerText", recursive: true)</h3>
+		</footer>
+	</div>
+    
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</body>
+</html>
+

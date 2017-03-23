@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Homepage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<h3>@Umbraco.Field("siteTitle")</h3>
+	@Umbraco.Field("logo")
+	@Umbraco.RenderMacro("newProjects")
+	
