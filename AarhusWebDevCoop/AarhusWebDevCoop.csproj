@@ -332,8 +332,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\db\AarhusWebDevCoop.mdf" />
-    <Content Include="App_Data\db\AarhusWebDevCoop_log.ldf">
+    <Content Include="App_Data\AarhusWebDevCoop.mdf" />
+    <Content Include="App_Data\AarhusWebDevCoop_log.ldf">
       <DependentUpon>AarhusWebDevCoop.mdf</DependentUpon>
     </Content>
     <Content Include="Config\splashes\booting.aspx" />
@@ -3226,6 +3226,7 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\db\" />
     <Folder Include="App_Data\NuGetBackup\20170208-094700\Umbraco\" />
     <Folder Include="App_Data\NuGetBackup\20170208-094700\Umbraco_Client\" />
     <Folder Include="App_Data\packages\created\" />
