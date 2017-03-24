@@ -13,7 +13,8 @@
         string image = member.GetValue<string>("photo");
         var imageCrop = JsonConvert.DeserializeObject<ImageCropDataSet>(image);
         var imagePath = imageCrop.Src.GetCropUrl(width: 100);
-        <li>@member.Name <span><img src="@imagePath" /></span></li>
+        <li><strong>@member.Name</strong></li>
+		<li><img src="@imagePath" /></li>
         <ul>
             <li>
                <span><strong>Adresse:</strong></span> @member.GetValue("Address")
