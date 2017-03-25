@@ -4,6 +4,7 @@
 @{
     var selection = CurrentPage.Site().Children.Where("Visible");
     var projectsSelection = Umbraco.Content(1088).Children.Where("Visible").OrderBy("CreateDate desc");
+	var compSelection = Umbraco.Content(1088).Children.Where("projectStatus == @0", 11);
     var root = CurrentPage.AncestorOrSelf(1);
 }
 
@@ -32,10 +33,17 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
           
 		<ul class="dropdown-menu">
-            @foreach (var item in projectsSelection)
+			@if (Members.GetCurrentLoginStatus().IsLoggedIn) {
+            foreach (var item in projectsSelection)
 				{
 					<li class="@(item.Name == Model.Content.Name ? "active" : null)"><a href="@item.Url">@item.Name</a></li>
 				}
+			}else{
+				foreach (var item in compSelection)
+                {
+				<li class="@(item.Name == Model.Content.Name ? "active" : null)"><a href="@item.Url">@item.Name</a></li>
+				}
+			}
           </ul>
 			  
         </li>

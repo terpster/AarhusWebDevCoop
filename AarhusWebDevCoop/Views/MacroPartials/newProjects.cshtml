@@ -4,7 +4,7 @@
 	var selection = CurrentPage.Site().Children.Where("DocumentTypeAlias == \"projectsOverview\"").First().Children.Where("projectStatus == @0", 11).OrderBy("CreateDate desc").Take(5);
 
 }
-<h2>Our Completed projects</h2>
+<h3>Our Completed projects</h3>
 <ul>
 	@foreach (var item in selection.Where("Visible"))
 	{

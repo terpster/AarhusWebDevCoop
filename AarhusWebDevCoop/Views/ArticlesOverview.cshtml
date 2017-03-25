@@ -3,6 +3,4 @@
 @{
 	Layout = "Master.cshtml";
 }
-
-<h3>@Umbraco.Field("articlesTitle")</h3>
-	@Umbraco.Field("articlesBodyText")
+@Umbraco.RenderMacro("listArticles")
