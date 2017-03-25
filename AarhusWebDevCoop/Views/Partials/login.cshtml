@@ -1,12 +1,9 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-
-
 @using System.Web.Mvc.Html
 @using ClientDependency.Core.Mvc
 @using Umbraco.Web
 @using Umbraco.Web.Models
 @using Umbraco.Web.Controllers
-
 @{
     var loginModel = new LoginModel();
     
@@ -18,23 +15,29 @@
 }
 @* NOTE: This RenderJsHere code should be put on your main template page where the rest of your script tags are placed *@
 @Html.RenderJsHere()
+	<div class="container">
 @if (!Members.GetCurrentLoginStatus().IsLoggedIn) {
-using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
-{		
-    <fieldset>
-        <legend>Login</legend>
+	using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
+{		<div class="col-md-6">
+    <legend>Login</legend>
+    <div class="form-group">
         @Html.ValidationSummary("loginModel", true)
         @Html.LabelFor(m => loginModel.Username)
-        @Html.TextBoxFor(m => loginModel.Username)
-        @Html.ValidationMessageFor(m => loginModel.Username)
-        <br />
+        <div class="form-control">
+            @Html.TextBoxFor(m => loginModel.Username)
+            @Html.ValidationMessageFor(m => loginModel.Username)
+        </div>
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => loginModel.Password)
-        @Html.PasswordFor(m => loginModel.Password)
-        @Html.ValidationMessageFor(m => loginModel.Password)
+        <div class="form-control">
+            @Html.PasswordFor(m => loginModel.Password)
+            @Html.ValidationMessageFor(m => loginModel.Password)
+        </div>
         <br />
-        <button>Login</button>
-		
-    </fieldset>
+    </div>
+    <button class="btn btn-primary">Login</button>
+</div>
 }
 }else {
 <p>You are currently logged in as
