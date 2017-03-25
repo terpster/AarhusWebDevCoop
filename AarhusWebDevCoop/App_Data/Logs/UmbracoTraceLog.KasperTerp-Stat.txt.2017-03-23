@@ -1,0 +1,284 @@
+﻿ 2017-03-23 19:32:24,323 [P11460/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.9 application starting on KASPERTERP-STAT
+ 2017-03-23 19:32:24,340 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-23 19:32:24,352 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 12ms)
+ 2017-03-23 19:32:24,405 [P11460/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-23 19:32:24,406 [P11460/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-23 19:32:24,411 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-23 19:32:24,717 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 305ms)
+ 2017-03-23 19:32:24,733 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-23 19:32:24,740 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 6ms)
+ 2017-03-23 19:32:24,740 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-23 19:32:24,754 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 13ms)
+ 2017-03-23 19:32:24,765 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-23 19:32:24,769 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+ 2017-03-23 19:32:24,769 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-23 19:32:24,774 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2017-03-23 19:32:24,818 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-23 19:32:24,823 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 5ms)
+ 2017-03-23 19:32:24,824 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-23 19:32:24,831 [P11460/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 6ms)
+ 2017-03-23 19:32:41,910 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   ved System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:41,910 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:32:42,049 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:42,049 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:32:43,051 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:43,051 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:32:44,052 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:44,052 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:32:45,054 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:45,054 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:32:46,055 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:32:46,055 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:33:03,071 [P11460/D2/T1] WARN  Umbraco.Core.Persistence.DbConnectionExtensions - Configured database is reporting as not being available! DataSource: KASPERBÆRBAR\SQLEXPRESS, InitialCatalog: AarhusWebDevCoop. Exception: System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   ved System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:33:03,071 [P11460/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2017-03-23 19:33:03,073 [P11460/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but Umbraco cannot connect to the database.
+   ved Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   ved Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   ved Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   ved Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   ved Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2017-03-23 19:33:29,165 [P11460/D2/T8] ERROR UmbracoExamine.DataServices.UmbracoContentService - EXCEPTION OCCURRED reading GetAllUserPropertyNames
+System.Data.SqlClient.SqlException (0x80131904): Der opstod en netværksrelateret eller forekomstspecifik fejl, da det blev forsøgt at oprette forbindelse til SQL Server. Serveren blev ikke fundet, eller der var ikke adgang til den. Kontroller, at forekomstnavnet er korrekt, og at SQL Server er konfigureret til at tillade fjernforbindelser. (provider: SQL Network Interfaces, error: 26 - Fejl ved søgning efter angivet server/forekomst.)
+   ved System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   ved System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ved System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ved System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ved System.Data.SqlClient.SqlConnection.Open()
+   ved Umbraco.Core.Persistence.FaultHandling.RetryPolicy.<>c__DisplayClass1.<ExecuteAction>b__0()
+   ved Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   ved Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction(Action action)
+   ved Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection, RetryPolicy retryPolicy)
+   ved Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection)
+   ved Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   ved Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   ved System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   ved System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   ved UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 2017-03-23 19:33:29,260 [P11460/D2/T8] INFO  Umbraco.Core.MainDom - Stopping...
+ 2017-03-23 19:33:29,260 [P11460/D2/T8] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2017-03-23 19:33:59,318 [P11460/D2/T6] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: InitializationError
+
+_shutDownMessage=Initialization Error
+HostingEnvironment initiated shutdown
+HostingEnvironment forårsagede nedlukning
+
+_shutDownStack=   ved System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   ved System.Environment.get_StackTrace()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   ved System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   ved System.Web.HttpRuntime.AppDomainShutdownTimerCallback(Object state)
+   ved System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   ved System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.TimerQueueTimer.CallCallback()
+   ved System.Threading.TimerQueueTimer.Fire()
+   ved System.Threading.TimerQueue.FireNextTimers()
+   ved System.Threading.TimerQueue.AppDomainTimerCallback()
+ 2017-03-23 19:38:25,949 [P12948/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.9 application starting on KASPERTERP-STAT
+ 2017-03-23 19:38:25,970 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-23 19:38:25,986 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 16ms)
+ 2017-03-23 19:38:26,041 [P12948/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-23 19:38:26,044 [P12948/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-23 19:38:26,049 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-23 19:38:26,392 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 343ms)
+ 2017-03-23 19:38:26,410 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-23 19:38:26,414 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 4ms)
+ 2017-03-23 19:38:26,415 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-23 19:38:26,420 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 5ms)
+ 2017-03-23 19:38:26,432 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-23 19:38:26,437 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 5ms)
+ 2017-03-23 19:38:26,438 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-23 19:38:26,442 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 4ms)
+ 2017-03-23 19:38:26,482 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-23 19:38:26,487 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 5ms)
+ 2017-03-23 19:38:26,488 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-23 19:38:26,492 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 4ms)
+ 2017-03-23 19:38:28,881 [P12948/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-23 19:38:29,108 [P12948/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-23 19:38:29,127 [P12948/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-23 19:38:29,200 [P12948/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-23 19:38:29,224 [P12948/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will build its caches and indexes, and then adjust its last synced Id to the latest found in the database and maintain cache updates based on that Id.
+ 2017-03-23 19:38:29,238 [P12948/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2017-03-23 19:38:29,244 [P12948/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-23 19:38:29,247 [P12948/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2017-03-23 19:38:29,837 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-03-23 19:38:29,915 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - member, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-03-23 19:38:30,008 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - member, took 92ms, Provider=InternalMemberIndexer, NodeId=-1
+ 2017-03-23 19:38:30,008 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,025 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=InternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,033 [P12948/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=3116
+ 2017-03-23 19:38:30,160 [P12948/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=3117
+ 2017-03-23 19:38:30,161 [P12948/D2/T7] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=3118
+ 2017-03-23 19:38:30,241 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-23 19:38:30,252 [P12948/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 10ms)
+ 2017-03-23 19:38:30,420 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 395ms, Provider=InternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,420 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=InternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,581 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 160ms, Provider=InternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,581 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=ExternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,590 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=ExternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,616 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 26ms, Provider=ExternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,617 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=ExternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,626 [P12948/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 9ms, Provider=ExternalIndexer, NodeId=-1
+ 2017-03-23 19:38:30,634 [P12948/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 4773ms)
+ 2017-03-23 19:38:30,787 [P12948/D2/T7] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49749/umbraco (UmbracoModule request)
+ 2017-03-23 19:38:34,718 [P12948/D2/T14] INFO  umbraco.content - Save Xml to file...
+ 2017-03-23 19:38:34,723 [P12948/D2/T14] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-23 19:38:37,391 [P12948/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-23 19:38:37,397 [P12948/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 5ms)
+ 2017-03-23 19:38:37,555 [P12948/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.cms.businesslogic.macro.IMacroEngine
+ 2017-03-23 19:38:37,563 [P12948/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 0 (took 7ms)
+ 2017-03-23 19:38:48,517 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-23 19:38:48,532 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 15ms)
+ 2017-03-23 19:38:48,575 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-23 19:38:48,582 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 7ms)
+ 2017-03-23 19:38:48,593 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-23 19:38:48,594 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-03-23 19:38:48,596 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-23 19:38:48,603 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 6ms)
+ 2017-03-23 19:38:48,614 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-03-23 19:38:48,623 [P12948/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 8ms)
+ 2017-03-23 19:39:31,147 [P12948/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-22 19:39:31
+ 2017-03-23 19:48:01,346 [P16808/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.5.9 application starting on KASPERTERP-STAT
+ 2017-03-23 19:48:01,364 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-03-23 19:48:01,378 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 13ms)
+ 2017-03-23 19:48:01,419 [P16808/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-03-23 19:48:01,421 [P16808/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-03-23 19:48:01,426 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2017-03-23 19:48:01,555 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 128ms)
+ 2017-03-23 19:48:01,661 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-03-23 19:48:01,662 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2017-03-23 19:48:01,662 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-03-23 19:48:01,664 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2017-03-23 19:48:01,679 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2017-03-23 19:48:01,722 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 42ms)
+ 2017-03-23 19:48:01,722 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2017-03-23 19:48:01,733 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 11ms)
+ 2017-03-23 19:48:01,881 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2017-03-23 19:48:01,883 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 1ms)
+ 2017-03-23 19:48:01,883 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2017-03-23 19:48:01,884 [P16808/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 1ms)
+ 2017-03-23 19:48:04,175 [P16808/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-03-23 19:48:04,437 [P16808/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-03-23 19:48:04,531 [P16808/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-03-23 19:48:04,599 [P16808/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-03-23 19:48:04,655 [P16808/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3394ms)
+ 2017-03-23 19:48:06,746 [P16808/D2/T6] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:49749/umbraco (UmbracoModule request)
+ 2017-03-23 19:48:07,304 [P16808/D2/T6] INFO  umbraco.content - Load Xml from file...
+ 2017-03-23 19:48:07,306 [P16808/D2/T6] INFO  umbraco.content - Loaded Xml from file.
+ 2017-03-23 19:48:07,767 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-03-23 19:48:07,768 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2017-03-23 19:48:08,441 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-03-23 19:48:08,442 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2017-03-23 19:48:08,564 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.cms.businesslogic.macro.IMacroEngine
+ 2017-03-23 19:48:08,565 [P16808/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 0 (took 1ms)
+ 2017-03-23 19:48:11,423 [P16808/D2/T15] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-23 19:48:15,672 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-23 19:48:15,673 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2017-03-23 19:48:15,709 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-23 19:48:15,712 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 3ms)
+ 2017-03-23 19:48:15,724 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-23 19:48:15,724 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-03-23 19:48:15,728 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-23 19:48:15,729 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2017-03-23 19:48:15,747 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2017-03-23 19:48:15,749 [P16808/D2/T15] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 2ms)
+ 2017-03-23 19:49:07,341 [P16808/D2/T14] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-22 19:49:07

@@ -1,5 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.MemberSection>
-    @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using Newtonsoft.Json;
 @using Umbraco.Web.Models;
     @using ContentModels = Umbraco.Web.PublishedContentModels;
@@ -13,7 +14,12 @@
         string image = member.GetValue<string>("photo");
         var imageCrop = JsonConvert.DeserializeObject<ImageCropDataSet>(image);
         var imagePath = imageCrop.Src.GetCropUrl(width: 100);
-        <li>@member.Name <span><img src="@imagePath" /></span></li>
+		String[] skills = member.GetValue("skills").ToString().Split(',');
+		string skillString = string.Join(", ", from skill in skills 
+										 select umbraco.library.GetPreValueAsString(Convert.ToInt32(skill)));
+        			
+		<li><strong>@member.Name</strong></li>
+		<li><img src="@imagePath" /></li>
         <ul>
             <li>
                <span><strong>Adresse:</strong></span> @member.GetValue("Address")
@@ -30,6 +36,10 @@
             <li>
                 <span><strong>Email.:</strong></span> @member.GetValue("Mobile")
             </li>
+			<ul>
+					<li><strong>Skills</strong></li>
+					<ul><li>@skillString</li></ul>
+			</ul>
         </ul>
         }
     </ul>
